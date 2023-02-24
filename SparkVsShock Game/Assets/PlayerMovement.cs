@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Change GetAxis to GetAxisRaw to have character stop immediately after pressing the move buttons
-        float moveX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveX * 7f, rb.velocity.y);
+        float moveX = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveX * 8.5f, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
 	    {
-		    rb.velocity = new Vector2(rb.velocity.x, 7f);
+		    rb.velocity = new Vector2(rb.velocity.x, 16f);
 	    }
     }
 
