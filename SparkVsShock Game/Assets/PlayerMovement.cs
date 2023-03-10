@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
 
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private float yVelJumpReleaseMod = 2f;
 
     // Start is called before the first frame update
     private void Start()
@@ -19,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+    var jumpInputReleased = Input.GetButtonUp("Jump"); 
+
+
         //Change GetAxis to GetAxisRaw to have character stop immediately after pressing the move buttons
         float moveX = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveX * 8.5f, rb.velocity.y);
@@ -27,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
 	    {
 		    rb.velocity = new Vector2(rb.velocity.x, 16f);
 	    }
+
+        if(jumpInputReleased && rb.velocity.y > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / yVelJumpReleaseMod);
+        }
     }
 
     private bool IsGrounded()
