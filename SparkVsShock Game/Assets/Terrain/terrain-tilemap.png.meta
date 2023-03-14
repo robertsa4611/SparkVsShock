@@ -3215,9 +3215,9 @@ TextureImporter:
       terrain-tilemap_62: -1861175755
       terrain-tilemap_120: 1829119745
       terrain-tilemap_49: 2064572541
-      terrain-tilemap_60: 1490359279
-      terrain-tilemap_30: -1780015656
       terrain-tilemap_78: 2066961833
+      terrain-tilemap_30: -1780015656
+      terrain-tilemap_60: 1490359279
       terrain-tilemap_72: -869088796
       terrain-tilemap_89: -863455196
       terrain-tilemap_69: -1447164139
@@ -3292,8 +3292,8 @@ TextureImporter:
       terrain-tilemap_124: -1404857018
       terrain-tilemap_138: -1010043991
       terrain-tilemap_61: -1617777860
-      terrain-tilemap_126: -624605184
       terrain-tilemap_46: -639179036
+      terrain-tilemap_126: -624605184
       terrain-tilemap_42: 297397
   spritePackingTag: 
   pSDRemoveMatte: 0
