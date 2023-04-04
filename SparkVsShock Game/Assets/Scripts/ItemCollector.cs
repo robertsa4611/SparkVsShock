@@ -8,11 +8,13 @@ public class ItemCollector : MonoBehaviour
     private int shoes = 0;
     [SerializeField] private Image customImage1;
     [SerializeField] private Image customImage2;
+    private AudioSource shoeSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Shoe"))
         {
+            GetComponent<AudioSource>().Play();
             Destroy(collision.gameObject);
             shoes++;
         }
