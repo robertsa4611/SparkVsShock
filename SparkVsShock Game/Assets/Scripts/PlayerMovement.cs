@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-
+    
+    [SerializeField] private bool active = true;
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float yVelJumpReleaseMod = 2f;
 
@@ -36,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / yVelJumpReleaseMod);
         }
+
+        if(!active)
+        {
+            return;
+        }
     }
 
     private bool IsGrounded()
@@ -43,19 +49,58 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
+
+ public void Die()
+{
+    active = false;
+    coll.enabled = false;
+    rb.velocity = Vector2.zero; // Stop any movement
+    Debug.Log("Player died!"); // Print a message to the console
+}
+
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Trap"))
+    {
+        Die();
+    }
+}
+
+/*
+private void MiniJump()
+{
+}
+*/
+
+/*
+    private void Die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+void OnCollisionEnter2D(Collision2D collision)
+{
+    if (CompareTag = "Trap")
+    {
+        Die();
+    }
+}
+*/
+
+
+
+
+
     //death stuff
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
             Die();
         }
     }
-
-    private void Die()
-    {
-        rb.bodyType = RigidbodyType2D.Static;
-    }
-
+*/
+  
+      
 
 }
