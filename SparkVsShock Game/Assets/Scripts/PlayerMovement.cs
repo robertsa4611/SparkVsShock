@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -56,6 +57,9 @@ public class PlayerMovement : MonoBehaviour
     coll.enabled = false;
     rb.velocity = Vector2.zero; // Stop any movement
     Debug.Log("Player died!"); // Print a message to the console
+    
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
 }
 
 private void OnCollisionEnter2D(Collision2D collision)
@@ -66,41 +70,6 @@ private void OnCollisionEnter2D(Collision2D collision)
     }
 }
 
-/*
-private void MiniJump()
-{
-}
-*/
 
-/*
-    private void Die()
-    {
-        rb.bodyType = RigidbodyType2D.Static;
-    }
-void OnCollisionEnter2D(Collision2D collision)
-{
-    if (CompareTag = "Trap")
-    {
-        Die();
-    }
-}
-*/
-
-
-
-
-
-    //death stuff
-    /*
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Trap"))
-        {
-            Die();
-        }
-    }
-*/
-  
-      
 
 }
