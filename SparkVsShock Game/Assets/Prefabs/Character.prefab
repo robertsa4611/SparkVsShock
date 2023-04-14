@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 2074607432}
   - component: {fileID: 2074607433}
   - component: {fileID: 2074607434}
+  - component: {fileID: 811723266}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -224,7 +225,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.096553326, y: -0.22021866}
+  m_Offset: {x: 0.021115541, y: -0.17021573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -235,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0159597, y: 1.4276657}
+  m_Size: {x: 1.2942839, y: 1.6478193}
   m_EdgeRadius: 0
 --- !u!114 &8646588997612096302
 MonoBehaviour:
@@ -253,8 +254,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   yVelJumpReleaseMod: 2
-  shoeImage1: {fileID: 0}
-  shoeImage2: {fileID: 0}
 --- !u!114 &8646588997612096301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,8 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
-  customImage1: {fileID: 0}
-  customImage2: {fileID: 0}
+  shoeImage1: {fileID: 0}
+  shoeImage2: {fileID: 0}
   keyImage: {fileID: 0}
   doubleJumpText: {fileID: 0}
 --- !u!82 &4340738689985618494
@@ -682,6 +681,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam1: {fileID: 8646588997739826544}
   cam2: {fileID: 0}
+--- !u!95 &811723266
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646588997612096276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c933277411419414a8ef97224d98e041, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &8646588997739826547
 GameObject:
   m_ObjectHideFlags: 0

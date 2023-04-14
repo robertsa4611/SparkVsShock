@@ -14,8 +14,8 @@ public class ItemCollector : MonoBehaviour
     private int coins = 0;
     private int keys = 0;
     [SerializeField] private Text coinText;
-    [SerializeField] private Image customImage1;
-    [SerializeField] private Image customImage2;
+    [SerializeField] private Image shoeImage1;
+    [SerializeField] private Image shoeImage2;
     [SerializeField] private Image keyImage;
     [SerializeField] private Text doubleJumpText;
 
@@ -63,12 +63,12 @@ public class ItemCollector : MonoBehaviour
 
         if (shoes == 1)
         {
-            customImage1.enabled = true;
+            shoeImage1.enabled = true;
         }
 
         if (shoes == 2)
         {
-            customImage2.enabled = true;
+            shoeImage2.enabled = true;
             doubleJumpText.enabled = true;
         }
     }

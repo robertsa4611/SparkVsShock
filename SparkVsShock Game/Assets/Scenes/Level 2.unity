@@ -19381,11 +19381,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2193905911035910396}
     - target: {fileID: 6601263984571726003, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-      propertyPath: customImage1
+      propertyPath: shoeImage1
       value: 
       objectReference: {fileID: 635397621}
     - target: {fileID: 6601263984571726003, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-      propertyPath: customImage2
+      propertyPath: shoeImage2
       value: 
       objectReference: {fileID: 1970700788}
     - target: {fileID: 6601263984571726003, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
@@ -19440,14 +19440,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 8646588997612096302, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-      propertyPath: shoeImage1
-      value: 
-      objectReference: {fileID: 635397621}
-    - target: {fileID: 8646588997612096302, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-      propertyPath: shoeImage2
-      value: 
-      objectReference: {fileID: 1970700788}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
 --- !u!1001 &2145365458

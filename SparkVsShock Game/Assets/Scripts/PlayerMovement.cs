@@ -13,9 +13,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float yVelJumpReleaseMod = 2f;
 
-    [SerializeField] private Image shoeImage1;
-    [SerializeField] private Image shoeImage2;
-
     // Start is called before the first frame update
     private void Start()
     {
