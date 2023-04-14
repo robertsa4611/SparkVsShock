@@ -19236,11 +19236,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4517544ead9b45d2b9912820ff6633e, type: 3}
---- !u!20 &1896803451 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8646588997739826544, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-  m_PrefabInstance: {fileID: 2103568348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1970700788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1970700788, guid: 104ce4648698d4cde8c2b66accf6df0a, type: 3}
@@ -19309,25 +19304,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4517544ead9b45d2b9912820ff6633e, type: 3}
---- !u!1 &2074607422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8646588997612096276, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
-  m_PrefabInstance: {fileID: 2103568348}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2074607434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074607422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37038b625c25845a3ba5b87788d950f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam1: {fileID: 1896803451}
-  cam2: {fileID: 81246463}
 --- !u!1001 &2100038865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19392,6 +19368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2074607434, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
+      propertyPath: cam2
+      value: 
+      objectReference: {fileID: 81246463}
     - target: {fileID: 6601263984571726003, guid: 895146ae4d37f4a44b4d1972500feae6, type: 3}
       propertyPath: coinText
       value: 
