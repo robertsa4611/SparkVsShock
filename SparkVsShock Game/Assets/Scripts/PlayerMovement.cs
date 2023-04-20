@@ -6,10 +6,17 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator anim;
     private BoxCollider2D coll;
     private bool doubleJump = false;
     private bool doubleJumpActive = false;
     private static int shoesVar;
+
+    private float moveX = 0f;
+    private SpriteRenderer sprite;
+    [SerializeField] private float moveSpeed = 8.5f;
+    [SerializeField] private float jumpForce = 16f;
+
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float yVelJumpReleaseMod = 2f;
 
@@ -17,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
     }
 
@@ -31,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Change GetAxis to GetAxisRaw to have character stop immediately after pressing the move buttons
-        float moveX = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveX * 8.5f, rb.velocity.y);
+        moveX = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
         if (IsGrounded() && !Input.GetButtonDown("Jump") && doubleJumpActive)
         {
@@ -43,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 	    {
 		    if (IsGrounded() || doubleJump && doubleJumpActive)
             {
-                rb.velocity = new Vector2(rb.velocity.x, 16f);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 doubleJump = !doubleJump;
             }
 	    }
@@ -51,6 +60,24 @@ public class PlayerMovement : MonoBehaviour
         if(jumpInputReleased && rb.velocity.y > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / yVelJumpReleaseMod);
+        }
+
+        UpdateAnimationUpdate();
+    }
+
+    private void UpdateAnimationUpdate()
+    {
+        if (moveX > 0f)
+        {
+            anim.SetBool("running", true);
+            sprite.flipX = false;
+        } else if (moveX < 0f)
+        {
+            anim.SetBool("running", true);
+            sprite.flipX = true;
+        } else
+        {
+            anim.SetBool("running", false);
         }
     }
 
