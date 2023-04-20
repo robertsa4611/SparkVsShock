@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4070382729827658583}
   - component: {fileID: 4070382729827658582}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Amaan Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
