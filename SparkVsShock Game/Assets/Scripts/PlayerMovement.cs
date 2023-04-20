@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float yVelJumpReleaseMod = 2f;
+
+    [SerializeField] private bool active = true;
 
     // Start is called before the first frame update
     private void Start()
@@ -63,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         UpdateAnimationUpdate();
+
+        if(!active)
+        {
+            return;
+        }
     }
 
     private void UpdateAnimationUpdate()
@@ -86,19 +94,23 @@ public class PlayerMovement : MonoBehaviour
        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
    }
 
-    //death stuff
-  /*  private void OnCollisionEnter2D(Collision2D collision)
+     public void Die()
     {
-        if (collision.gameObject.CompareTag("Trap"))
-        {
-            Die();
-        }
+    active = false;
+    coll.enabled = false;
+    rb.velocity = Vector2.zero; // Stop any movement
+    Debug.Log("Player died!"); // Print a message to the console
+    
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
     }
 
-    private void Die()
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Trap"))
     {
-        rb.bodyType = RigidbodyType2D.Static;
-    }*/
-
+        Die();
+    }
+}
     
 }
