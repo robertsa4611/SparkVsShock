@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+    /*
     public int damage;
     public PlayerHealth playerHealth;
 
@@ -14,4 +15,5 @@ public class EnemyDamage : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
+    */
 }
