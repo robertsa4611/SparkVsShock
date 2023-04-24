@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
+
+        
     }
 
     // Update is called once per frame
@@ -74,6 +76,9 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+
+
+        
        
     }
 
