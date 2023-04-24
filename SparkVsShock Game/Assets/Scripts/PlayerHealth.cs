@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    /*
     public int maxHealth = 5;
     public static int health;
     public int currentHealth;
@@ -26,4 +27,5 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = health;
         healthText.text = health.ToString();
     }
+    */
 }

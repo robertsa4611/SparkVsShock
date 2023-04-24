@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private bool active = true;
 
-    private static int healthy; //Bringing Health Variable Over
+    //private static int healthy; //Bringing Health Variable Over
 
     // Start is called before the first frame update
     private void Start()
@@ -74,12 +74,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        healthy = PlayerHealth.health;
-        //Die on Zero Health
-        if (healthy <= 0)
-        {
-            Die();
-        }
+       
     }
 
     private void UpdateAnimationUpdate()
