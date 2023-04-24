@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Trap
   - Shoe
+  - Coin
+  - Key
+  - Door
+  - Character
   layers:
   - Default
   - TransparentFX
