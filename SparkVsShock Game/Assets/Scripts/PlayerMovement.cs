@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private static int shoesVar;
 
     private float moveX = 0f;
+
+    public static int saveScene;
+
     private SpriteRenderer sprite;
     [SerializeField] private float moveSpeed = 8.5f;
     [SerializeField] private float jumpForce = 16f;
@@ -100,9 +103,12 @@ public class PlayerMovement : MonoBehaviour
     coll.enabled = false;
     rb.velocity = Vector2.zero; // Stop any movement
     Debug.Log("Player died!"); // Print a message to the console
-    
-    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-    SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
+    saveScene = SceneManager.GetActiveScene().buildIndex;
+    PlayerPrefs.SetInt("SavedScene", saveScene);
+    SceneManager.LoadScene(3);
+
+    //int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    //SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
     }
 
 private void OnCollisionEnter2D(Collision2D collision)
