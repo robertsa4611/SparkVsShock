@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Change GetAxis to GetAxisRaw to have character stop immediately after pressing the move buttons
-        moveX = Input.GetAxis("Horizontal");
+        moveX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
 
         if (IsGrounded() && !Input.GetButtonDown("Jump") && doubleJumpActive)
