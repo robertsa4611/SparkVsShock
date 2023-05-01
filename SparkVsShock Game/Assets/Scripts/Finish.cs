@@ -20,6 +20,7 @@ public class Finish : MonoBehaviour
         {
             finishSound.Play();
             levelCompleted = true;
+            PlayerPrefs.SetInt("SavedCoins", ItemCollector.coins);
             Invoke("CompleteLevel", 4f);
         }
     }

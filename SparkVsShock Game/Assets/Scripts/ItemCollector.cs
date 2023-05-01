@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ItemCollector : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class ItemCollector : MonoBehaviour
         private AudioSource keySound;
         private AudioSource doorSound;
     public static int shoes = 0;
-    private int coins = 0;
+    public static int coins = 0;
     private int keys = 0;
     [SerializeField] private Text coinText;
     [SerializeField] private Image shoeImage1;
@@ -21,11 +22,17 @@ public class ItemCollector : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.SetInt("SavedCoins", 0);
+        }
         sound = GetComponents<AudioSource>();
         shoeSound = sound [0];
         coinSound = sound [1];
         keySound = sound [2];
         doorSound = sound [3];
+        coins = PlayerPrefs.GetInt("SavedCoins");
+        coinText.text = coins.ToString();
     }
 
 
