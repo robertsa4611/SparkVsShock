@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public static int saveScene;
 
-    private enum MovementState {idle, running, jumping};
+    private enum MovementState {idle, running, jumping, falling};
 
     private SpriteRenderer sprite;
     [SerializeField] private float moveSpeed = 8.5f;
@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.jumping;
+            state = MovementState.falling;
         }
 
         anim.SetInteger("state", (int)state);
