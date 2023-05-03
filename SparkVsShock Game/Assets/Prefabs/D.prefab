@@ -113,15 +113,14 @@ GameObject:
   - component: {fileID: 2103568350}
   - component: {fileID: 2074607432}
   - component: {fileID: 2074607433}
-  - component: {fileID: 2074607434}
-  - component: {fileID: 811723266}
+  - component: {fileID: 5155182540134203411}
   m_Layer: 0
-  m_Name: Drew Character
+  m_Name: D
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8646588997612096273
 Transform:
   m_ObjectHideFlags: 0
@@ -225,7 +224,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07855728, y: -0.28372085}
+  m_Offset: {x: 0.007416725, y: -2.2578502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -236,7 +235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8150384, y: 1.4207923}
+  m_Size: {x: 0.7438984, y: 1.3140831}
   m_EdgeRadius: 0
 --- !u!114 &8646588997612096302
 MonoBehaviour:
@@ -670,21 +669,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2074607434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8646588997612096276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37038b625c25845a3ba5b87788d950f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam1: {fileID: 8646588997739826544}
-  cam2: {fileID: 0}
---- !u!95 &811723266
+--- !u!95 &5155182540134203411
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -694,7 +679,7 @@ Animator:
   m_GameObject: {fileID: 8646588997612096276}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c933277411419414a8ef97224d98e041, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1ce7fe6cb3972481e8a630652b81b661, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

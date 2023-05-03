@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static int saveScene;
 
+    private enum MovementState {idle, running, jumping};
+
     private SpriteRenderer sprite;
     [SerializeField] private float moveSpeed = 8.5f;
     [SerializeField] private float jumpForce = 16f;
@@ -78,18 +80,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimationUpdate()
     {
+        MovementState state;
+
         if (moveX > 0f)
         {
-            anim.SetBool("running", true);
+            state = MovementState.running;
             sprite.flipX = false;
         } else if (moveX < 0f)
         {
-            anim.SetBool("running", true);
+            state = MovementState.running;
             sprite.flipX = true;
         } else
         {
-            anim.SetBool("running", false);
+            state = MovementState.idle;
         }
+
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.jumping;
+        }
+
+        anim.SetInteger("state", (int)state);
     }
 
    private bool IsGrounded()
