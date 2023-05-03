@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/double jump test.unity
+    guid: 10103ace758502047b9e6ff2ec125e67
   - enabled: 1
     path: Assets/Scenes/Start Screen.unity
     guid: 6825f54b6e22c4a258c3f3a55f8187e3
