@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
     Debug.Log("Player died!"); // Print a message to the console
     saveScene = SceneManager.GetActiveScene().buildIndex;
     PlayerPrefs.SetInt("SavedScene", saveScene);
-    SceneManager.LoadScene(3);
+    SceneManager.LoadScene("Game Over");
 
     //int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     //SceneManager.LoadScene(currentSceneIndex, LoadSceneMode.Single);
