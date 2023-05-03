@@ -1,1 +1,0 @@
-Added a smoke trail for the "Movement Thing" Animation. Idk why I did it, but if you guys can add it then it works

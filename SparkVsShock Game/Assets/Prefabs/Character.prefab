@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 2074607433}
   - component: {fileID: 2074607434}
   - component: {fileID: 811723266}
-  - component: {fileID: 4513295556199021647}
+  - component: {fileID: 2190293420211395332}
   m_Layer: 0
   m_Name: Character
   m_TagString: Character
@@ -595,7 +595,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.85676074
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -705,7 +705,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &4513295556199021647
+--- !u!114 &2190293420211395332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
